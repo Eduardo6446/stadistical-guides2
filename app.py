@@ -16,7 +16,7 @@ def index():
         result1 = math.factorial(5)
         length_lista = len(lista)
         permutaciones_x = list(permutations(x))
-        strings = ["apple", "banana", "cherry", "date"]
+        strings = ["Juan", "Pedro", "Pablo"]
         combinaciones_strings_2 = list(combinations(strings, 2))
         #GUIA 5
         # Definir los vectores de probabilidades

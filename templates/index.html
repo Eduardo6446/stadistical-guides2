@@ -3,37 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Estadistica 2</title>
 </head>
 <body>
-    <h1>Resultados de los cálculos:</h1>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <img src="../static/images/name.png" width="112" height="28">
+          </a>
+      
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+      
+        <div class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">    
+                <a class="navbar-item" href="https://estadistica-mw3m.onrender.com">
+                  Ir a la Actividad 1
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </nav>
 
-    <h2>Combinaciones:</h2>
-    <p>{{ resultado.combinaciones }}</p>
+    <div class="container">
+        <div class="columns is-3-desktop is-multiline is-centered is-6-tablet">
 
-    <h2>Comb:</h2>
-    <p>{{ resultado.comb }}</p>
+            <div class="column is-3-desktop">
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title">
+                        Calculo de <sub>9</sub>C<sup>4</sup>
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <p>{{ resultado.comb }}</p>
+                        <br>
+                        <code>comb(9, 4, exact=True)</code>
+                      </div>
+                    </div>
+                </div>
+            </div>
 
-    <h2>Factorial:</h2>
-    <p>{{ resultado.facotial }}</p>
+            <div class="column is-3-desktop">
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title">
+                        Factorial de 5
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <p>{{ resultado.facotial }}</p>
+                        <br>
+                        <code>math.factorial(5)</code>
+                      </div>
+                    </div>
+                </div>
+            </div>
 
-    <h2>Longitud de lista:</h2>
-    <p>{{ resultado.l }}</p>
+            <div class="column is-3-desktop">
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title">
+                        combinaciones de 3 elementos
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <p>{{ resultado.combinaciones }}</p>
+                        <code>x = [2, 3, 5, 7]
+                            list(combinations(x, 3))
+                        </code>
+                        
+                      </div>
+                    </div>
+                </div>
+            </div>            
+            
+            <div class="column is-3-desktop">
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title">
+                        Numero de combinaciones
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <p>{{ resultado.l }}</p>
+                        <br>
+                        <code>len(lista)
+                        </code>
+                      </div>
+                    </div>
+                </div>
+            </div>
 
-    <h2>Permutaciones:</h2>
-    <p>{{ resultado.per }}</p>
+            <div class="column is-6-desktop">
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title">
+                        Lista de permutaciones
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <p>{{ resultado.per }}</p>
+                        <code>list(permutations(x))
+                        </code>
+                        
+                      </div>
+                    </div>
+                </div>
+            </div>
 
-    <h2>Combinaciones de Strings:</h2>
-    <p>{{ resultado.str }}</p>
+            <div class="column is-6-desktop">
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title">
+                        Combinaciones de 2 elementos
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <p>{{ resultado.str }}</p>
+                        <br>
+                        <code>["Juan", "Pedro", "Pablo"]
+                            list(combinations(strings, 2))
+                        </code>
+                      </div>
+                    </div>
+                </div>
+            </div>
 
-    <h2>La probabilidad total de B es:</h2>
-    <p>{{resultado.pb}}</p>
-    <h2>pab</h2>
-    <p>{{resultado.pab}}</p>
-    <h2>La probabilidad total de A es:</h2>
-    <p>{{resultado.pa}}</p>
-    <h2>Las probabilidades condicionales P(B|A) son:</h2>
-    <p>{{resultado.pba}}</p>
+            <div class="column is-5-desktop">
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title">
+                        probabilidad total
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <p>pa = {{ resultado.pa }}</p>
+                        <code>pb = np.array([0.5, 0.3, 0.2])
+                            pab = np.array([0.04, 0.03, 0.02])
+                            pa = np.sum(pb * pab)
+                        </code>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-5-desktop">
+                <div class="card">
+                    <header class="card-header">
+                      <p class="card-header-title">
+                        Formula de Bayes
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <p>{{resultado.pba}}</p>
+                        <br>
+                        <br>
+                        <code>pba = (pb * pab) / pa</code>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 </html>
